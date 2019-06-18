@@ -6,7 +6,7 @@
 
 
 
-
+local Config = {}
 ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -435,8 +435,8 @@ end)
 --// Armour //-- 
 --// Config for CrazyArmour & InvincibleArmour//--
 
-local Config.Crazy = 400
-local Config.Invinci = 200
+Config.Crazy = 400
+Config.Invinci = 200
 
 
 ESX.RegisterUsableItem('SmallArmour', function(source)
@@ -632,23 +632,23 @@ local Shotgun = "WEAPON_PUMPSHOTGUN"
 AddAmmoToPed(xPlayer, G() , 100)
 local  G = GetHashKey()
 --/// Config ///--
-local config.Lammo = 200 --// Light Ammo //-- Default
-local config.Sammo = 300 --// Small Ammo //-- Default
-local config.Bammo = 100 --// Big Ammo //-- Default
-local config.Hammo = 50 --// Heavy Ammo //-- Default
+Config.Lammo = 200 --// Light Ammo //-- Default
+Config.Sammo = 300 --// Small Ammo //-- Default
+Config.Bammo = 100 --// Big Ammo //-- Default
+Config.Hammo = 50 --// Heavy Ammo //-- Default
 
 ESX.RegisterUsableItem('LightAmmo', function(source)
     xPlayer.removeInventoryItem
     wait(0)
     AddAmmoToPed(xPlayer, G(SMG), Config.Lammo)
-    TriggerClientEvent('esx:showNotification', source, "You Have:".. config.Lammo .."~r~Light Ammo")
+    TriggerClientEvent('esx:showNotification', source, "You Have:".. Config.Lammo .."~r~Light Ammo")
 end	
 
 ESX.RegisterUsableItem('SmallAmmo', function(source)
     xPlayer.removeInventoryItem
     wait(0)
     AddAmmoToPed(xPlayer, G(SMG), Config.Sammo)
-    TriggerClientEvent('esx:showNotification', source, "You Have:".. config.Sammo .."~r~Small Ammo")
+    TriggerClientEvent('esx:showNotification', source, "You Have:".. Config.Sammo .."~r~Small Ammo")
 end	
 
 
@@ -656,7 +656,7 @@ ESX.RegisterUsableItem('BigAmmo', function(source)
     xPlayer.removeInventoryItem
     wait(0)
     AddAmmoToPed(xPlayer, G(SMG), Config.Bammo)
-    TriggerClientEvent('esx:showNotification', source, "You Have:".. config.Bammo .."~r~Big Ammo")
+    TriggerClientEvent('esx:showNotification', source, "You Have:".. Config.Bammo .."~r~Big Ammo")
 end	
 
 
@@ -664,7 +664,7 @@ ESX.RegisterUsableItem('HeavyAmmo', function(source)
     xPlayer.removeInventoryItem
     wait(0)
     AddAmmoToPed(xPlayer, G(SMG), Config.Hammo)
-    TriggerClientEvent('esx:showNotification', source, "You Have:".. config.Hammo .."~r~Heavy Ammo")
+    TriggerClientEvent('esx:showNotification', source, "You Have:".. Config.Hammo .."~r~Heavy Ammo")
 end	
 
 
